@@ -1,0 +1,152 @@
+@import "../scss/vars.scss";
+
+.pro-plan-modal {
+  width: 800px !important;
+
+  .ant-modal-close-x {
+    background: $color-grey;
+    border-radius: 30px;
+    color: $color-white;
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+    opacity: 0.9;
+    width: 40px;
+    z-index: 2;
+  }
+  .ant-modal-content {
+    border-radius: 0;
+  }
+
+  .ant-modal-body {
+    flex-direction: row !important;
+    padding: 0;
+
+    .side-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: $padding-xxl $padding-xl;
+      width: 400px;
+
+      .bold {
+        font-weight: bold;
+      }
+
+      .heart-icon {
+        svg {
+          stroke-width: 0;
+        }
+      }
+
+      .location-icon {
+        svg {
+          height: 15px;
+          width: 15px;
+          margin-right: $padding-xs;
+        }
+      }
+
+      section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: $padding-sm 0;
+
+        label {
+          font-size: $text-size-lg;
+          font-weight: 900;
+
+          svg {
+            height: 15px;
+            margin-bottom: $padding-xxs;
+            width: 15px;
+          }
+
+          .pro-star {
+            margin-bottom: $padding-sm;
+          }
+        }
+      }
+
+      .design-list {
+        list-style: none;
+        margin: 0;
+        padding-inline-start: 0;
+
+        li {
+          margin-top: $padding-xxs;
+        }
+      }
+
+      .anticon {
+        color: $color-gold;
+        margin-right: $padding-xs;
+        stroke: $color-gold;
+        stroke-width: 120px;
+      }
+
+      footer {
+        display: flex;
+        flex-direction: column;
+        margin: $padding-sm 0;
+
+        .btn {
+          &.primary {
+            background-color: $color-gold;
+          }
+          &.link-primary {
+            color: $color-grey;
+            margin-top: $padding-xs;
+            font-weight: 900;
+          }
+        }
+      }
+
+      #price {
+        color: $color-gold;
+        font-size: $text-size-xl;
+      }
+
+      i {
+        color: $color-grey;
+      }
+    }
+
+    #rightSideImage {
+      background-image: url("https://www.musthavemenus.com/imageservice/images/img/13/mymenus/ProModalCollage.jpg");
+      background-size: cover;
+      width: 400px;
+      z-index: 1;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .pro-plan-modal {
+    width: auto !important;
+    top: 10px;
+    
+    .ant-modal-body {
+      display: grid !important;
+      grid-template-columns: auto;
+
+      .side-info {
+        grid-column: 1;
+        grid-row: 2;
+        width: auto;
+        padding: $padding $padding-lg;
+      }
+
+      #rightSideImage {
+        grid-column: 1;
+        grid-row: 1;
+        background-image: url("https://www.musthavemenus.com/imageservice/images/img/13/mymenus/ProModalCollage.jpg");
+        background-size: cover;
+        width: auto;
+        height: 200px;
+        z-index: 1;
+      }
+    }
+  }
+}

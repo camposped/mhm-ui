@@ -1,0 +1,141 @@
+@import "../../scss/vars.scss";
+
+button.btn {
+  background: $color-white;
+  border-radius: $radius-small;
+  border: 0;
+  color: $color-primary;
+  cursor: pointer;
+  font-family: $family-serif;
+  font-size: $text-size;
+  height: 40px;
+  line-height: 40px;
+  min-width: 132px;
+  outline: 0 !important;
+  padding: 0 $padding-sm;
+  transition: all 0.25s ease;
+  user-select: none;
+
+  &.primary {
+    background: $color-primary;
+    color: $color-white;
+
+    &.inverted {
+      background: $color-white;
+      color: $color-primary;
+      border: 1px solid $color-primary;
+
+      &:hover {
+        background: #fafafa;
+      }
+    }
+
+    &:hover {
+      background: #FF5C69;
+    }
+  }
+
+  &.secondary {
+    background: $color-secondary;
+    border-radius: $radius-small;
+    color: $color-text;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 $padding-xs;
+
+    &:hover {
+      opacity: .75;
+      // background: rgb(235, 235, 235, 0.75);
+    }
+  }
+
+  &.secondary-dark {
+    background: $color-secondary-dark;
+    border-radius: $radius-small;
+    color: $color-white;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 $padding-xs;
+
+    &:hover {
+      opacity: .75;
+      // background: rgb(235, 235, 235, 0.75);
+    }
+  }
+
+  &.tertiary {
+    background: $color-tertiary;
+    border: 1px solid $color-tertiary;
+    color: $color-white;
+   
+    &:hover {
+      background: #f3daa5;
+    }
+  }
+
+  &.tertiary-dark {
+    background: $color-tertiary-dark;
+    border: 1px solid $color-tertiary-dark;
+    color: $color-white;
+
+    &:hover {
+      background: #f1d5a7;
+    }
+  }
+
+  &.link {
+    color: $color-grey;
+    border: 1px solid $color-grey;
+
+    &:hover {
+      color: #bfbfbf;
+      border-color: #bfbfbf;
+    }
+  }
+
+  &.link-dark {
+    background-color: $color-white;
+    border-radius: $radius-small;
+    border: 1px solid $color-grey;
+    color: $color-grey;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 $padding-xs;
+
+    &:hover {
+      color: #bfbfbf;
+      border-color: #bfbfbf;
+    }
+  }
+
+  &.link-primary {
+    color: $color-primary;
+    padding: 0;
+    height: initial;
+    line-height: initial;
+
+    &:hover {
+      color: #FF5C69;
+      border-color: #FF5C69 ;
+    }
+  }
+
+  &.large {
+    font-size: $text-size + 2px;
+    height: 50px;
+    line-height: 50px;
+    min-width: 127px;
+  }
+
+  &.small {
+    font-size: $text-size-sm + 1px;
+    height: 32px;
+    line-height: 32px;
+    min-width: auto;
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
